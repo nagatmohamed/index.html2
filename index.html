@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Girl 🎂❤️</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow: hidden;
+
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+
+            /* ⭐⭐⭐ حطي اسم صورتكم هنا ⭐⭐⭐ */
+            background-image:
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url('manoza.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            position: relative;
+        }
+
+
+        /* البلور على الخلفية */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+
+            backdrop-filter: blur(5px);
+
+            z-index: -1;
+        }
+
+
+        /* المحتوى الرئيسي */
+
+        .container {
+            text-align: center;
+            z-index: 10;
+
+            width: 90%;
+            max-width: 700px;
+        }
+
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+
+            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+
+            animation: appear 2s ease;
+        }
+
+
+        .name {
+            font-size: 28px;
+            color: #ffd6e7;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* الكيكة */
+
+        .cake {
+            font-size: 150px;
+
+            cursor: pointer;
+
+            display: inline-block;
+
+            animation: floating 2s ease-in-out infinite;
+
+            transition: 0.3s;
+        }
+
+
+        .cake:hover {
+            transform: scale(1.1);
+        }
+
+
+        .click-text {
+            font-size: 18px;
+            margin-top: -20px;
+
+            animation: blink 1.5s infinite;
+        }
+
+
+        /* الرسالة */
+
+        .message {
+            display: none;
+
+            background: rgba(255,255,255,0.95);
+
+            color: #8b3155;
+
+            padding: 30px;
+
+            border-radius: 25px;
+
+            margin-top: 20px;
+
+            line-height: 2;
+
+            font-size: 19px;
+
+            box-shadow:
+                0 10px 40px rgba(0,0,0,0.3);
+
+            animation: messageAppear 1s ease;
+
+            direction: rtl;
+        }
+
+
+        /* البلالين */
+
+        .balloon {
+            position: fixed;
+
+            bottom: -150px;
+
+            font-size: 60px;
+
+            animation: balloonUp 8s linear forwards;
+
+            z-index: 5;
+        }
+
+
+        /* القلوب */
+
+        .heart {
+            position: fixed;
+
+            bottom: -50px;
+
+            font-size: 30px;
+
+            animation: heartUp 6s linear infinite;
+
+            z-index: 2;
+        }
+
+
+        /* الشمع الطاير */
+
+        .candle {
+            position: fixed;
+
+            bottom: -50px;
+
+            font-size: 30px;
+
+            animation: candleUp 5s linear infinite;
+
+            z-index: 2;
+        }
+
+
+        /* Animations */
+
+        @keyframes floating {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+        }
+
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        @keyframes messageAppear {
+
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        @keyframes blink {
+
+            50% {
+                opacity: 0.4;
+            }
+
+        }
+
+
+        @keyframes heartUp {
+
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+
+        }
+
+
+        @keyframes candleUp {
+
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(20deg);
+                opacity: 0;
+            }
+
+        }
+
+
+        @keyframes balloonUp {
+
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-120vh);
+                opacity: 0;
+            }
+
+        }
+
+
+        /* للموبايل */
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .name {
+                font-size: 22px;
+            }
+
+            .cake {
+                font-size: 110px;
+            }
+
+            .message {
+                font-size: 16px;
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- القلوب -->
+
+    <div class="heart" style="left:5%; animation-delay:0s;">❤️</div>
+    <div class="heart" style="left:20%; animation-delay:2s;">💗</div>
+    <div class="heart" style="left:40%; animation-delay:1s;">💕</div>
+    <div class="heart" style="left:65%; animation-delay:3s;">💖</div>
+    <div class="heart" style="left:85%; animation-delay:1.5s;">💘</div>
+
+
+    <!-- الشموع الطايرة -->
+
+    <div class="candle" style="left:15%; animation-delay:1s;">🕯️</div>
+    <div class="candle" style="left:55%; animation-delay:3s;">🕯️</div>
+    <div class="candle" style="left:90%; animation-delay:2s;">🕯️</div>
+
+
+    <!-- المحتوى -->
+
+    <div class="container">
+
+        <h1>
+            birthday's beautiful girl 🎀
+        </h1>
+
+        <div class="name">
+            (Manoza) ❤️
+        </div>
+
+
+        <!-- 🎂 دوسي على الكيكة -->
+
+        <div class="cake" onclick="showMessage()">
+            🎂
+        </div>
+
+        <div class="click-text">
+            دوسي على الكيكة 🎂✨
+        </div>
+
+
+        <!-- الرسالة -->
+
+        <div class="message" id="message">
+
+            كل سنه وانتي طيبه يروح قلبي ❤️
+
+            <br>
+
+            كل سنه وانتي معايا وماليه الدنيا عليا
+            بحكاويكي وخناقتنا الي بتبقي من طرف واحد
+            (انتي) 😂❤️
+
+            <br>
+
+            يارب أشوفك أحسن وأسعد واحدة في الدنيا
+            عشان متستاهليش غير كدا عمتا ❤️
+
+            <br>
+
+            ربنا يخليكي ليا واعرفي دايمًا
+            إني بحبك أوي أوي أوي 💋
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        function showMessage() {
+
+            /* إظهار الرسالة */
+
+            document.getElementById("message").style.display = "block";
+
+
+            /* عمل بالونات */
+
+            const balloons = [
+                "🎈",
+                "🎈",
+                "🎈",
+                "🎈",
+                "🎈",
+                "🎈",
+                "🎈",
+                "🎈"
+            ];
+
+
+            balloons.forEach((balloon, index) => {
+
+                const element = document.createElement("div");
+
+                element.className = "balloon";
+
+                element.innerHTML = balloon;
+
+                element.style.left =
+                    Math.random() * 100 + "%";
+
+                element.style.animationDelay =
+                    Math.random() * 2 + "s";
+
+                document.body.appendChild(element);
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+</html>
